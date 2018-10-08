@@ -1,27 +1,35 @@
 # ScSelect
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+Component para multiselect
 
-## Development server
+## Como usar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Importe o **ScSelectModule** no modulo em que deseja utilizar o componente
 
-## Code scaffolding
+```js
+import { ScSelectModule } from 'sc-select'
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  // ...
+  imports: [
+    ScSelectModule
+  ]
+  // ...
+})
 
-## Build
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Settings
+Parâmetros para o componente
 
-## Running unit tests
+| Setting         |Type    | Description            | Default Value |
+|:--- |:--- |:--- |:--- |
+| searchPlaceholder | string | Placeholder para o campo de filtro  | undefined |
+| label | string | Label para o componente | undefined |
+| listElements | array<{id:number, name:string, checked?:boolean}> | Lista de opções para o componente | undefined |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Eventos
+- `onChange` - Retorna a lista de itens selecionados após uma alteação.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    Example : (onChange)="changeListSelect($event)""

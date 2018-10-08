@@ -1,0 +1,1 @@
+export * from './src/app/sc-select/sc-select.module'
