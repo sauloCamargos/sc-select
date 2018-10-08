@@ -1,0 +1,29 @@
+<div class="wrapper-sc-select">
+    <div class="input-label">
+        {{label}}
+    </div>
+    <div class="wrapper-data-selected" >
+        <button *ngIf="elementsSelected.length > 0" (click)="clearAll()" class="remove-all-button">
+            <img src="https://image.flaticon.com/icons/svg/463/463065.svg" alt="" srcset="">
+        </button>
+        <div class="wrapper-data-selected-label" data-action="dropdown-select" (click)="toogleOpen($event)" #dataSelectLabelEl>
+            <div class="data-selected-label">
+                {{elementsSelectedDisplay}}
+            </div>
+        </div>
+        <div class="wrapper-data-selected-list" [ngClass]="{'open': statusOpen}">
+            <div class="wrapper-input">
+                <input type="text" [(ngModel)]="filter.name" class="sc-select-input" [placeholder]="searchPlaceholder">
+            </div>
+            <div class="elements-list">
+                <div class="element-item" *ngFor="let item of listElements | filterList:filter ; let index = index">
+                    <label [for]="item+'_'+index">
+                        <input type="checkbox" [checked]="item.checked"  [value]="item.name" (change)="toogleElement($event,item)" [id]="item+'_'+index">
+                        <i class="checkbox-element"></i> {{item.name}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

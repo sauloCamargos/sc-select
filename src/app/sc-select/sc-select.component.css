@@ -1,0 +1,208 @@
+.data-selected-label {
+    display: inline-block;
+
+
+}
+
+.wrapper-data-selected-label {
+    padding: 0px 10px;
+    line-height: 55px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding-right: 45px;
+}
+
+.wrapper-sc-select {
+    display: inline-block;
+    width: 270px;
+}
+
+.wrapper-data-selected {
+    position: relative;
+    width: 100%;    
+    border: 1px solid #ababab;
+}
+
+
+.wrapper-sc-select * {
+    box-sizing: border-box;
+}
+
+.wrapper-data-selected-list {
+    overflow-y: hidden;
+    height: 0px;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    border: none;
+    box-sizing: border-box;
+  
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+}
+
+.wrapper-data-selected-list.open {
+    height: 245px;
+    padding: 10px;
+    border: 1px solid #a2a2a2;
+     
+}
+
+input.sc-select-input:focus {
+    outline: none;
+}
+
+input.sc-select-input {
+    border: none;
+    width: 100%;
+    background: url(http://www.stickpng.com/assets/thumbs/585e4ae1cb11b227491c3393.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25px;
+    padding: 0px 0px 0px 35px;
+    box-sizing: border-box;
+    background-position: 2px 0px;
+}
+
+.wrapper-input {
+    border-bottom: 1px solid #a0a0a0;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+button.remove-all-button {
+    background: #fff;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15px;
+    border: none;
+}
+
+button.remove-all-button img {
+    width: 100%;
+    height: auto;
+}
+
+.elements-list {
+    overflow-y: auto;
+    max-height: 180px;
+}
+
+.elements-list {
+    overflow-y: auto;
+    max-height: 180px;
+}
+
+.element-item {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.element-item input {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+.element-item label {
+    line-height: 25px;
+}
+
+.elements-list::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+  .elements-list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #c2c9d2;
+  }
+
+
+.element-item {
+    margin: 10px 0px 0px 40px;
+    position: relative;
+    display: block;
+    width: 100px;
+}
+
+.element-item input[type="checkbox"] {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+}
+.checkbox-element {
+    position: absolute;
+    top: -4px;
+    left: -40px;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    user-select: none;
+    color: #e7e7e7;
+}
+.checkbox-element:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #7bbe72;
+}
+.checkbox-element:after {
+  content: '';
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #7bbe72;
+    border-left: 2px solid #7bbe72;
+    -webkit-transform: rotate(-45deg) scale(0);
+    -moz-transform: rotate(-45deg) scale(0);
+    -ms-transform: rotate(-45deg) scale(0);
+    transform: rotate(-45deg) scale(0);
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+input[type="checkbox"]:checked ~ .checkbox-element::before {
+    color: #7bbe72;
+}
+
+input[type="checkbox"]:checked ~ .checkbox-element::after {
+    -webkit-transform: rotate(-45deg) scale(1);
+    -moz-transform: rotate(-45deg) scale(1);
+    -ms-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+}
+
+.checkbox label {
+    min-height: 24px;
+    padding-left: 35px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    vertical-align: sub;
+}
+input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+.input-label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
